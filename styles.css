@@ -647,3 +647,319 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,.35);
   }
 }
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  width: 34px;
+  height: 26px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3000;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 999px;
+}
+
+.nav-menu {
+  display: contents;
+}
+
+.center-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1050px) {
+  .navbar {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    min-height: 90px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #080a0d;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 2rem;
+    display: none;
+  }
+
+  .menu-toggle:checked ~ .nav-menu {
+    display: block;
+  }
+
+  .nav-links,
+  .nav-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .nav-links {
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-links a::after {
+    bottom: -6px;
+  }
+
+  .hero {
+    padding-top: 9rem;
+  }
+}
+#menu-toggle{
+
+display:none;
+
+}
+
+.hamburger{
+
+display:none;
+
+cursor:pointer;
+
+width:35px;
+
+height:26px;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+z-index:9999;
+
+}
+
+.hamburger span{
+
+display:block;
+
+height:3px;
+
+background:white;
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.menu{
+
+display:flex;
+
+align-items:center;
+
+gap:2rem;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:700;
+
+}
+
+@media(max-width:900px){
+
+.hamburger{
+
+display:flex;
+
+}
+
+.menu{
+
+position:fixed;
+
+top:0;
+
+right:-100%;
+
+width:85%;
+
+height:100vh;
+
+background:#0b0b0b;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+gap:2rem;
+
+transition:.4s;
+
+box-shadow:-15px 0 50px rgba(0,0,0,.4);
+
+}
+
+#menu-toggle:checked~.menu{
+
+right:0;
+
+}
+
+.menu a{
+
+font-size:1.2rem;
+
+}
+
+.phone-btn{
+
+margin-top:1rem;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+.nav-actions{
+
+display:none;
+
+}
+
+}
+/* PREMIUM MOBILE MENU */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  width: 34px;
+  height: 26px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5000;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 999px;
+  transition: 0.35s ease;
+}
+
+.nav-menu {
+  display: contents;
+}
+
+@media (max-width: 1050px) {
+  .navbar {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    min-height: 90px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(420px, 86vw);
+    height: 100vh;
+    z-index: 4000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background: rgba(8, 10, 13, 0.88);
+    backdrop-filter: blur(22px);
+    border-left: 1px solid rgba(255,255,255,.12);
+    box-shadow: -30px 0 80px rgba(0,0,0,.45);
+
+    transition: right 0.45s ease;
+  }
+
+  .menu-toggle:checked ~ .nav-menu {
+    right: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(11.5px) rotate(45deg);
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-11.5px) rotate(-45deg);
+  }
+
+  .nav-menu .nav-links,
+  .nav-menu .nav-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-menu .nav-links a {
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+  }
+
+  .nav-menu .nav-links a::after {
+    bottom: -7px;
+  }
+
+  .nav-menu .nav-actions {
+    gap: 1rem;
+  }
+
+  .phone-link {
+    font-size: 1.05rem;
+  }
+
+  .estimate-btn {
+    padding: 1rem 1.25rem;
+  }
+
+  .hero {
+    padding-top: 9rem;
+  }
+}
